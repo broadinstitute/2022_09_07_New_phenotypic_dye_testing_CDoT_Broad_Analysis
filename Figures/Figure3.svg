@@ -119,7 +119,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="471.85269"
+     inkscape:cx="304.85269"
      inkscape:cy="319.71632"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -129,7 +129,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="2400"
-     inkscape:window-height="1271"
+     inkscape:window-height="1421"
      inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1" />
@@ -212,5 +212,27 @@
          x="232.38474"
          y="12.896555"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444447px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332">Phenotypic distinctiveness </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="47.451954"
+       y="20.051329"
+       id="text527"><tspan
+         sodipodi:role="line"
+         id="tspan525"
+         x="47.451954"
+         y="20.051329"
+         style="stroke-width:0.26458332">r2 = 0.835</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="199.02719"
+       y="19.738169"
+       id="text527-8"><tspan
+         sodipodi:role="line"
+         id="tspan525-3"
+         x="199.02719"
+         y="19.738169"
+         style="stroke-width:0.26458332">r2 = 0.563</tspan></text>
   </g>
 </svg>
