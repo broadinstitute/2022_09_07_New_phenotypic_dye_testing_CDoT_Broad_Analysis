@@ -162,9 +162,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0000001"
-     inkscape:cx="213.21393"
-     inkscape:cy="270.74708"
+     inkscape:zoom="2.0000002"
+     inkscape:cx="276.2274"
+     inkscape:cy="379.3453"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -172,9 +172,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="2400"
-     inkscape:window-height="1421"
-     inkscape:window-x="2391"
+     inkscape:window-width="1920"
+     inkscape:window-height="1121"
+     inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:snap-global="false" />
@@ -250,61 +250,6 @@
        y="-172.24452"
        clip-path="url(#clipPath3916)"
        transform="matrix(0.16665761,0,0,0.14482967,77.11898,32.226309)" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.6761"
-       y="15.457705"
-       id="text88"><tspan
-         sodipodi:role="line"
-         id="tspan86"
-         x="131.6761"
-         y="15.457705"
-         style="font-size:2.11666656px;stroke-width:0.26458332">0.66</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.37431"
-       y="25.28863"
-       id="text88-8"><tspan
-         sodipodi:role="line"
-         id="tspan86-5"
-         x="131.37431"
-         y="25.28863"
-         style="font-size:2.11666656px;stroke-width:0.26458332">0.67</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.24202"
-       y="35.276649"
-       id="text88-0"><tspan
-         sodipodi:role="line"
-         id="tspan86-2"
-         x="131.24202"
-         y="35.276649"
-         style="font-size:2.11666656px;stroke-width:0.26458332">0.64</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.24202"
-       y="45.264671"
-       id="text88-3"><tspan
-         sodipodi:role="line"
-         id="tspan86-23"
-         x="131.24202"
-         y="45.264671"
-         style="font-size:2.11666656px;stroke-width:0.26458332">0.65</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.10973"
-       y="55.318836"
-       id="text88-5"><tspan
-         sodipodi:role="line"
-         id="tspan86-1"
-         x="131.10973"
-         y="55.318836"
-         style="font-size:2.11666656px;stroke-width:0.26458332">0.64</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot339"
@@ -315,5 +260,5 @@
            height="280"
            x="-73"
            y="82.900528" /></flowRegion><flowPara
-         id="flowPara345"></flowPara></flowRoot>  </g>
+         id="flowPara345" /></flowRoot>  </g>
 </svg>
