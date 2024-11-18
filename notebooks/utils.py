@@ -23,7 +23,7 @@ def copairs_batches_newerversion(input_dict, mAP=''):
     pos_sameby = [pert_col]
     pos_diffby = []
 
-    neg_sameby = []
+    neg_sameby = [] #control_col should be neg_sameby -this excludes the DMSO profiles 
 
     #neg_diffby varies based on whether the mAP needs to be calculated with respect to the controls or treatments 
     if mAP == 'Control':
@@ -605,7 +605,7 @@ def copairs_batches_sistercompounds(input_dict, mAP=''):
     if mAP == 'Control':
         neg_diffby=[control_col]
     else:
-        neg_diffby=[sister_compounds]
+        neg_diffby=[sister_compounds] # 
     
     batch_size = 20000
     null_size = 10000
@@ -656,3 +656,146 @@ def copairs_batches_sistercompounds(input_dict, mAP=''):
     fig.show()
 
     return fig, output_dict
+
+### Check prior pushing 
+
+#A function to run copairs, save csv and plot the mAP graph
+def copairs_batches_withsistercompounds_updated(input_dict, mAP=''):
+    
+    #defining the parameters for performing copairs
+    control_col = "Metadata_control_type"
+    sister_compounds = 'Metadata_MoA'
+    pert_col = "Metadata_broad_sample"
+
+    pos_sameby = [pert_col]
+    pos_diffby = []
+
+    neg_sameby = []
+
+    #neg_diffby varies based on whether the mAP needs to be calculated with respect to the controls or treatments 
+    if mAP == 'Control':
+        neg_diffby=[control_col]
+    else:
+        neg_diffby=[pert_col, control_col] # 
+    
+    batch_size = 20000
+    null_size = 10000
+
+    output_dict = {}
+    for i in input_dict:
+         
+        with open(i, 'rb') as filetype:
+            if filetype.read(2) == b'\x1f\x8b':
+                df = pd.read_csv(i, compression='gzip')
+            else:
+                df = pd.read_csv(i)
+        name = input_dict.get(i)
+        metadata_columns = [ c for c in df.columns if 'Metadata' in c]
+        feature_columns = [c for c in df.columns if not 'Metadata' in c]
+
+        meta = df[metadata_columns].copy()
+
+        meta['Metadata_control_type'] = meta['Metadata_control_type'].fillna('trt')
+        meta['Metadata_broad_sample'] = meta['Metadata_broad_sample'].fillna('control')
+        meta['Metadata_MoA'] = meta['Metadata_MoA'].fillna('MoA')
+        features = df[feature_columns]
+        features = features.dropna(axis=1).values
+        result = average_precision(meta, features, pos_sameby, pos_diffby, neg_sameby, neg_diffby, batch_size)
+        result.to_csv(f"{i[:-4]}_Result_NegconNorm_mAP_wrt_{mAP}_woNAN_with_sistercpd_updated.csv")
+
+        aggregated_mAP = mean_average_precision(result, sameby=pos_sameby, null_size= 10000, threshold=0.05, seed=2)
+        output_dict[name] = aggregated_mAP
+
+        output_dict[name].to_csv(f"{i[:-4]}_Aggregate_result_NegconNorm_mAP_wrt_{mAP}_woNAN_with_sistercpd_updated.csv")
+
+
+    #making a violin plot from the data
+    combined_df = pd.DataFrame()
+    for i in output_dict.keys():
+        df = output_dict.get(i)
+        combined_df = pd.concat([combined_df, df.assign(dataset = i)])
+
+    df = combined_df    
+    fig = px.violin(x=df['mean_average_precision'], y=df['dataset'], range_x=[0,1.02], box=True, color_discrete_sequence=['#0173b2','#de8f05','#029e73','#d55e00','#cc78bc'], color=df['dataset'], orientation='h')
+    fig.update_traces(points='all', width=0.5)
+    fig.update_layout(height=2500, width=2750, font_family='sans serif', font=dict(size=95, color='black'), xaxis_title='Mean Average Precision', yaxis_title='', showlegend=False)
+    fig.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
+    fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
+    fig.update_xaxes(showline=True, linewidth=1, linecolor='black', tickangle=90)
+    fig.data = fig.data[::-1] 
+
+    fig.show('notebook')
+
+    return fig, output_dict
+
+
+#A function to run copairs, save csv and plot the mAP graph
+def copairs_batches_wosistercompounds_updated(input_dict, mAP=''):
+    
+    #defining the parameters for performing copairs
+    control_col = "Metadata_control_type"
+    sister_compounds = 'Metadata_MoA'
+    pert_col = "Metadata_broad_sample"
+
+    pos_sameby = [pert_col]
+    pos_diffby = []
+
+    neg_sameby = []
+
+    #neg_diffby varies based on whether the mAP needs to be calculated with respect to the controls or treatments 
+    if mAP == 'Control':
+        neg_diffby=[control_col]
+    else:
+        neg_diffby=[pert_col, sister_compounds, control_col] # 
+    
+    batch_size = 20000
+    null_size = 10000
+
+    output_dict = {}
+    for i in input_dict:
+         
+        with open(i, 'rb') as filetype:
+            if filetype.read(2) == b'\x1f\x8b':
+                df = pd.read_csv(i, compression='gzip')
+            else:
+                df = pd.read_csv(i)
+        name = input_dict.get(i)
+        metadata_columns = [ c for c in df.columns if 'Metadata' in c]
+        feature_columns = [c for c in df.columns if not 'Metadata' in c]
+
+        meta = df[metadata_columns].copy()
+
+        meta['Metadata_control_type'] = meta['Metadata_control_type'].fillna('trt')
+        meta['Metadata_broad_sample'] = meta['Metadata_broad_sample'].fillna('control')
+        meta['Metadata_MoA'] = meta['Metadata_MoA'].fillna('MoA')
+        features = df[feature_columns]
+        features = features.dropna(axis=1).values
+        result = average_precision(meta, features, pos_sameby, pos_diffby, neg_sameby, neg_diffby, batch_size)
+        result.to_csv(f"{i[:-4]}_Result_NegconNorm_mAP_wrt_{mAP}_woNAN_without_sistercpd_updated.csv")
+
+        aggregated_mAP = mean_average_precision(result, sameby=pos_sameby, null_size= 10000, threshold=0.05, seed=2)
+        output_dict[name] = aggregated_mAP
+
+        output_dict[name].to_csv(f"{i[:-4]}_Aggregate_result_NegconNorm_mAP_wrt_{mAP}_woNAN_without_sistercpd_updated.csv")
+
+
+    #making a violin plot from the data
+    combined_df = pd.DataFrame()
+    for i in output_dict.keys():
+        df = output_dict.get(i)
+        combined_df = pd.concat([combined_df, df.assign(dataset = i)])
+
+    df = combined_df    
+    fig = px.violin(x=df['mean_average_precision'], y=df['dataset'], range_x=[0,1.02], box=True, color_discrete_sequence=['#0173b2','#de8f05','#029e73','#d55e00','#cc78bc'], color=df['dataset'], orientation='h')
+    fig.update_traces(points='all', width=0.5)
+    fig.update_layout(height=2500, width=2750, font_family='sans serif', font=dict(size=95, color='black'), xaxis_title='Mean Average Precision', yaxis_title='', showlegend=False)
+    fig.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
+    fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
+    fig.update_xaxes(showline=True, linewidth=1, linecolor='black', tickangle=90)
+    fig.data = fig.data[::-1] 
+
+    fig.show()
+
+    return fig, output_dict
+
+
