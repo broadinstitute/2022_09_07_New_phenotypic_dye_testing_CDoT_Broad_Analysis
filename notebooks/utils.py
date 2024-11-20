@@ -401,7 +401,7 @@ def cell_count_norm_colorscheme_early_part2(dict1, dict2):
     plot.add_trace(go.Scatter(x=[None], y=[None],mode='markers',marker=dict(color='#fbafe4', symbol='pentagon', size=12),legendgroup='group6',showlegend=True,name='Compound 2 - ChromaLive_48h'))
 
 
-    plot.update_layout(height=1250,width=2000, font_family='sans serif', font=dict(size=24, color='Black'), boxmode='group',yaxis_title = 'Mean average precision',  legend=dict(yanchor="top",y=0.99,xanchor="left",x=0.01,font=dict(size=15)))
+    plot.update_layout(height=1250,width=2000, font_family='sans serif', font=dict(size=26, color='Black'), boxmode='group',yaxis_title = 'Mean average precision',  legend=dict(yanchor="top",y=0.99,xanchor="left",x=0.01))
     plot.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
     plot.update_xaxes(tickangle=90, categoryorder='total ascending')
     #plot.update_traces(marker_sizemin=10, marker_sizemode='area',marker_sizeref=1)
@@ -502,10 +502,10 @@ def plot_precision_values_dyeset(df, list=[], rename_columns = {}):
             else:
                 pass
             
-    figure.update_layout(height= 2500, width =2000, font_family='sans serif',font=dict(size=19, color='Black'))
-    figure.update_yaxes(range=[0,1.3])
+    figure.update_layout(height= 2500, width =2000, font_family='sans serif',font=dict(size=19, color='Black'), yaxis_title_font=dict(size=34))
+    figure.update_yaxes(tickfont=dict(size=24), range=[0,1.3])
     figure.update_traces(marker=dict(size=12))
-    figure.update_xaxes(tickangle = 90)
+    figure.update_xaxes(tickfont=dict(size=24), tickangle = 90)
     figure.update_annotations(font_size=19)
     figure.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
     figure.update_xaxes(linecolor='black')
