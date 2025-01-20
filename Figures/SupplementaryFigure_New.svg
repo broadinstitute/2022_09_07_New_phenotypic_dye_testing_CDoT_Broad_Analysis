@@ -11,13 +11,13 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="205.04918mm"
-   height="259.98239mm"
-   viewBox="0 0 205.04918 259.98239"
+   height="266.08817mm"
+   viewBox="0 0 205.04918 266.08816"
    version="1.1"
    id="svg3754"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="SupplementaryFigure_New.svg"
-   inkscape:export-filename="C:\Users\ssivagur\Documents\GitHub\2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis\Figures\SupplementaryFigure_New.png"
+   inkscape:export-filename="C:\Users\ssivagur\Documents\GitHub\2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis\Figures\supplementaryFigure_mAP_individual_Cpds_EarlyTimePoint_PhenotypicActivity.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -52,9 +52,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.3535534"
-     inkscape:cx="65.197191"
-     inkscape:cy="-196.52056"
+     inkscape:zoom="1"
+     inkscape:cx="53.630556"
+     inkscape:cy="541.95552"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -83,7 +83,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-2.2557775,-4.2956242)">
+     transform="translate(-2.2557775,1.8101296)">
     <image
        width="529.16669"
        height="661.45831"
@@ -94,5 +94,20 @@
        y="62.434414"
        clip-path="url(#clipPath168)"
        transform="matrix(0.40234949,0,0,0.40234949,111.25402,-26.979841)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="89.692291"
+       y="1.4062114"
+       id="text4761"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan4759"
+         x="89.692291"
+         y="1.4062114"
+         style="stroke-width:0.26458332"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.26458332"
+   id="tspan4763">Phenotypic activity</tspan> </tspan></text>
   </g>
 </svg>
