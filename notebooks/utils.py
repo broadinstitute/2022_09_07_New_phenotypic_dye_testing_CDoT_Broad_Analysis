@@ -163,7 +163,7 @@ def cell_count_norm_colorscheme(dict1, dict2):
 
     plot.update_layout(height=1250,width=2000, font_family='sans serif', font=dict(size=24, color='Black'), boxmode='group',yaxis_title = 'Mean average precision',  legend=dict(yanchor="bottom",y=0,xanchor="right",x=1))
     plot.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
-    plot.update_xaxes(tickangle=90, categoryorder='total ascending')
+    plot.update_xaxes(tickangle=90, categoryorder='mean ascending')
     plot.update_traces(marker_sizemin=3, marker_sizemode='area', marker_sizeref=0.1)
     plot.update_xaxes(linecolor='black')
     plot.update_yaxes(linecolor='black')
@@ -315,7 +315,7 @@ def cell_count_norm_colorscheme_early(dict1, dict2):
 
     plot.update_layout(height=1250,width=2000, font_family='sans serif', font=dict(size=24, color='Black'), boxmode='group',yaxis_title = 'Mean average precision',  legend=dict(yanchor="top",y=0.99,xanchor="left",x=0.01))
     plot.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
-    plot.update_xaxes(tickangle=90, categoryorder='total ascending')
+    plot.update_xaxes(tickangle=90, categoryorder='mean ascending')
     plot.update_traces(marker_sizemin=10, marker_sizemode='area',marker_sizeref=1)
     plot.update_layout(legend=dict(itemsizing="constant"))
     plot.update_xaxes(linecolor='black')
@@ -403,7 +403,7 @@ def cell_count_norm_colorscheme_early_part2(dict1, dict2):
 
     plot.update_layout(height=1250,width=2000, font_family='sans serif', font=dict(size=26, color='Black'), boxmode='group',yaxis_title = 'Mean average precision',  legend=dict(yanchor="top",y=0.99,xanchor="left",x=0.01))
     plot.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
-    plot.update_xaxes(tickangle=90, categoryorder='total ascending')
+    plot.update_xaxes(tickangle=90, categoryorder='mean ascending')
     #plot.update_traces(marker_sizemin=10, marker_sizemode='area',marker_sizeref=1)
     plot.update_layout(legend=dict(itemsizing="constant"))
     plot.update_xaxes(linecolor='black')
