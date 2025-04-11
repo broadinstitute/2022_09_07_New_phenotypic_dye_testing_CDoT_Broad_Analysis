@@ -82,7 +82,7 @@ def copairs_batches_newerversion(input_dict, negdiffby_parameters =[], filename 
     df = combined_df    
     fig = px.violin(x=df['mean_average_precision'], y=df['dataset'], range_x=[0,1.02], box=True, color_discrete_sequence=['#0173b2','#de8f05','#029e73','#d55e00','#cc78bc'], color=df['dataset'], orientation='h')
     fig.update_traces(points='all', width=0.5)
-    fig.update_layout(height=2500, width=2750, font_family='sans serif', font=dict(size=95, color='black'), xaxis_title='Mean Average Precision', yaxis_title='', showlegend=False)
+    fig.update_layout(height=2500, width=4000, font_family='sans serif', font=dict(size=95, color='black'), xaxis_title='Mean Average Precision', yaxis_title='', showlegend=False)
     fig.update_layout({'plot_bgcolor':'rgba(0,0,0,0)'})
     fig.update_yaxes(showline=True, linewidth=1, linecolor='black')
     fig.update_xaxes(showline=True, linewidth=1, linecolor='black', tickangle=90)
