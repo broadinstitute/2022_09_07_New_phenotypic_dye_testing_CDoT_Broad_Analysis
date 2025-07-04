@@ -91,7 +91,7 @@ def BRD_ID(i):
 # There was a difference in the column name in the plate 49 and it was renamed
 def cell_count_norm_colorscheme(dict1, dict2):
     #reading the moa metadata file 
-    moa_metadata = pd.read_csv('copairs_csv\\LC00009948_MoA_Common_Names.csv')
+    moa_metadata = pd.read_csv('/Users/sugan/Documents/GitHub/2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis/copairs_csv/UpdatedCopairsVersion/LC00009948_MoA_Common_Names.csv')
     new_dict = {}
     for i in dict1:  
         raw_df = pd.read_csv(i)
@@ -241,7 +241,7 @@ def copairs_batches_earlytimepoint(input_dict, mAP=''):
 
 def cell_count_norm_colorscheme_early(dict1, dict2):
     #reading the moa metadata file 
-    moa_metadata = pd.read_csv('copairs_csv\\LC00009948_MoA_Common_Names.csv')
+    moa_metadata = pd.read_csv('/Users/sugan/Documents/GitHub/2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis/copairs_csv/UpdatedCopairsVersion/LC00009948_MoA_Common_Names.csv')
     new_dict = {}
     for i in dict1:  
         raw_df = pd.read_csv(i)
@@ -316,7 +316,7 @@ def cell_count_norm_colorscheme_early(dict1, dict2):
 #only for subsection of the plots
 def cell_count_norm_colorscheme_early_part2(dict1, dict2):
     #reading the moa metadata file 
-    moa_metadata = pd.read_csv('copairs_csv\\LC00009948_MoA_Common_Names.csv')
+    moa_metadata = pd.read_csv('/Users/sugan/Documents/GitHub/2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis/copairs_csv/UpdatedCopairsVersion/LC00009948_MoA_Common_Names.csv')
     new_dict = {}
     for i in dict1:  
         raw_df = pd.read_csv(i)

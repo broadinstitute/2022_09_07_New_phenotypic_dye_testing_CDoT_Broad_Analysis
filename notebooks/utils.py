@@ -103,7 +103,7 @@ def BRD_ID(i):
 # There was a difference in the column name in the plate 49 and it was renamed
 def cell_count_norm_colorscheme(dict1, dict2):
     #reading the moa metadata file 
-    moa_metadata = pd.read_csv('..\\copairs_csv\\LC00009948_MoA_Common_Names.csv')
+    moa_metadata = pd.read_csv('/Users/sugan/Documents/GitHub/2022_09_07_New_phenotypic_dye_testing_CDoT_Broad_Analysis/copairs_csv/LC00009948_MoA_Common_Names.csv')
     new_dict = {}
     for i in dict1:  
         raw_df = pd.read_csv(i)
@@ -420,7 +420,8 @@ def scatter_plot_comparison_colorblack(df, col1='', col2='', cutoff=''):
     val = df['difference'] 
     df['Modified MoA'] = df['difference'].apply(lambda x: 'Other' if x < cutoff else df.loc[df['difference']==x, 'MoA'].iloc[0])
    
-
+    #print(df)
+     
     plot = go.Figure()
     plot = px.scatter(x=df[col1],y= df[col2],labels = {'x':'Mean average precision - '+ col1, 'y':'Mean average precision - ' + col2}, color=df['Modified MoA'], color_discrete_map={True:px.colors.qualitative.Set2, 'Other':'darkgrey'}, hover_name=df["MoA"])
     plot.add_shape(type='line', x0=0, y0=0, x1=1, y1=1, line=dict(color='lightgrey', dash='dashdot'))
