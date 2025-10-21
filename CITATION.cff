@@ -1,17 +1,28 @@
 cff-version: 1.2.0
-message: "If you use this template, please cite it as below."
-authors:
-- family-names: "Chandrasekaran"
-  given-names: "Srinivas Niranj"
-  orcid:  "https://orcid.org/0000-0001-8874-9988"
-- family-names: "Way"
-  given-names: "Gregory"
-  orcid: "https://orcid.org/0000-0002-0503-9348"
-- family-names: "Carpenter"
-  given-names: "Anne"
-  orcid: "https://orcid.org/0000-0003-1555-8261"
-- family-names: "Singh"
-  given-names: "Shantanu"
-  orcid: "https://orcid.org/0000-0003-3150-3025"
-title: "Broad Institute Imaging Platform Profiling Template"
-url: "https://github.com/cytomining/profiling-template"
+message: "If you use this data, please cite it as below."
+preferred-citation:
+  type: article
+  authors:
+    - family-names: 'Sivagurunathan'
+      given-names: 'Suganya'
+    - family-names: 'Byrne'
+      given-names: 'Patrick'
+    - family-names: 'Mu{\~n}oz'
+      given-names: 'Al{\'a}n F.'
+    - family-names: 'Arevalo'
+      given-names: 'John'
+    - family-names: 'Carpenter'
+      given-names: 'Anne E.'
+    - family-names: 'Singh'
+      given-names: 'Shantanu'
+    - family-names: 'Kost-Alimova'
+      given-names: 'Maria'
+    - family-names: 'Cimini'
+      given-names: 'Beth A.'
+  title: "Alternate dyes for image-based profiling assays"
+  journal: "SLAS Discovery"
+  volume: 36
+  year: 2025
+  date: 2025/10/21
+  doi: 10.1016/j.slasd.2025.100268
+  isbn: 2472-5552
